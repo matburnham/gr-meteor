@@ -17,25 +17,6 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 install(FILES
-    meteor_ar2300_source.xml
-    meteor_complex_to_msg_c.xml
-    meteor_waterfall_heatmap.xml
-    meteor_waterfall_plotter.xml
-    meteor_waterfall_sink.xml
-    meteor_enqueue_message_sink.xml
-    meteor_ax25_decoder_bm.xml
-    meteor_command_source.xml
-    meteor_ax25_encoder_mb.xml
-    meteor_noaa_apt_sink.xml
-    meteor_meteor_decoder_sink.xml
-    meteor_pdu_trim_uvector.xml
-    meteor_radio_source.xml
-    meteor_iq_only_receiver.xml
-    meteor_pmt_to_pdu.xml
-    meteor_golay_decoder.xml
-    meteor_cw_to_symbol.xml
-    meteor_morse_decoder.xml
-    meteor_threshold_printer.xml
-    meteor_groundstation_api.xml
-    meteor_groundstation_api_doppler.xml DESTINATION share/gnuradio/grc/blocks
+    meteor_meteor_decoder_sink.block.yml
+    DESTINATION share/gnuradio/grc/blocks
 )

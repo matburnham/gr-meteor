@@ -22,18 +22,6 @@
 ########################################################################
 install(FILES
     api.h
-    ax25.h
-    ar2300_source.h
-    complex_to_msg_c.h
-    waterfall_heatmap.h
-    waterfall_plotter.h
-    enqueue_message_sink.h
-    ax25_decoder_bm.h
-    command_source.h
-    ax25_encoder_mb.h
-    noaa_apt_sink.h
     meteor_decoder_sink.h
-    golay_decoder.h
-    cw_to_symbol.h
-    morse_decoder.h DESTINATION include/meteor
+    DESTINATION include/meteor
 )
