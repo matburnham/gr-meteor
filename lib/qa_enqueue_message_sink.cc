@@ -23,14 +23,14 @@
 #include <gnuradio/attributes.h>
 #include <gnuradio/blocks/message_strobe.h>
 #include <gnuradio/top_block.h>
-#include <starcoder/enqueue_message_sink.h>
+#include <meteor/enqueue_message_sink.h>
 #include <stdio.h>
 #include <string_queue.h>
 #include <chrono>
 #include <thread>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 void qa_enqueue_message_sink::test_no_registered_queue() {
   gr::top_block_sptr tb = gr::make_top_block("top");
@@ -39,8 +39,8 @@ void qa_enqueue_message_sink::test_no_registered_queue() {
   // blocks that aren't connected to anything. Thus the following block is
   // needed to have enqueue_message_sink connected to something.
   gr::block_sptr src = gr::blocks::message_strobe::make(pmt::mp("in"), 1000);
-  gr::starcoder::enqueue_message_sink::sptr op =
-      gr::starcoder::enqueue_message_sink::make();
+  gr::meteor::enqueue_message_sink::sptr op =
+      gr::meteor::enqueue_message_sink::make();
 
   gr::basic_block_sptr bb = op->to_basic_block();
   bb->_post(pmt::mp("in"), pmt::make_u8vector(10, 97));
@@ -64,11 +64,11 @@ void qa_enqueue_message_sink::test_registered_queue() {
   // blocks that aren't connected to anything. Thus the following block is
   // needed to have enqueue_message_sink connected to something.
   gr::block_sptr src = gr::blocks::message_strobe::make(pmt::mp("in"), 1000);
-  gr::starcoder::enqueue_message_sink::sptr op =
-      gr::starcoder::enqueue_message_sink::make();
+  gr::meteor::enqueue_message_sink::sptr op =
+      gr::meteor::enqueue_message_sink::make();
   string_queue q(10);
 
-  op->register_starcoder_queue(q.get_ptr());
+  op->register_meteor_queue(q.get_ptr());
 
   gr::basic_block_sptr bb = op->to_basic_block();
   bb->_post(pmt::mp("in"), pmt::make_u8vector(10, 97));  // 97 is ascii for 'a'
@@ -99,5 +99,5 @@ void qa_enqueue_message_sink::test_registered_queue() {
   CPPUNIT_ASSERT_EQUAL(q.pop(), empty_string);
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

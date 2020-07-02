@@ -43,10 +43,10 @@
 
 #include <gnuradio/io_signature.h>
 #include "ax25_encoder_mb_impl.h"
-#include <starcoder/ax25.h>
+#include <meteor/ax25.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 ax25_encoder_mb::sptr ax25_encoder_mb::make(
     const std::string &dest_addr, uint8_t dest_ssid,
@@ -183,5 +183,5 @@ void ax25_encoder_mb_impl::add_eob(uint64_t item) {
   add_item_tag(0, item, eob_key, value, srcid);
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

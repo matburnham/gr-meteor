@@ -37,14 +37,14 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_AX25_ENCODER_MB_H
-#define INCLUDED_STARCODER_AX25_ENCODER_MB_H
+#ifndef INCLUDED_METEOR_AX25_ENCODER_MB_H
+#define INCLUDED_METEOR_AX25_ENCODER_MB_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 /*!
  * \brief AX.25 encoder block that supports the legacy hardware radios.
@@ -53,10 +53,10 @@ namespace starcoder {
  * Each output byte contains only one LSB, thus the output can be directly
  * used for FM modulation.
  *
- * \ingroup starcoder
+ * \ingroup meteor
  *
  */
-class STARCODER_API ax25_encoder_mb : virtual public gr::sync_block {
+class METEOR_API ax25_encoder_mb : virtual public gr::sync_block {
  public:
   typedef boost::shared_ptr<ax25_encoder_mb> sptr;
 
@@ -86,7 +86,7 @@ class STARCODER_API ax25_encoder_mb : virtual public gr::sync_block {
                    bool scramble = true);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_AX25_ENCODER_MB_H */
+#endif /* INCLUDED_METEOR_AX25_ENCODER_MB_H */

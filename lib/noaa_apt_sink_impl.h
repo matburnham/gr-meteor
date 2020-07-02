@@ -37,17 +37,17 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_NOAA_APT_SINK_IMPL_H
-#define INCLUDED_STARCODER_NOAA_APT_SINK_IMPL_H
+#ifndef INCLUDED_METEOR_NOAA_APT_SINK_IMPL_H
+#define INCLUDED_METEOR_NOAA_APT_SINK_IMPL_H
 
-#include <starcoder/noaa_apt_sink.h>
+#include <meteor/noaa_apt_sink.h>
 #define PNG_DEBUG 3
 #include <chrono>
 #include <string_queue.h>
 #include <boost/gil/gil_all.hpp>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 enum class noaa_apt_sync_marker {
   SYNC_A, SYNC_B, NONE
 };
@@ -63,7 +63,7 @@ class noaa_apt_sink_impl : public noaa_apt_sink {
            gr_vector_void_star &output_items);
 
   bool stop();
-  void register_starcoder_queue(uint64_t ptr);
+  void register_meteor_queue(uint64_t ptr);
 
  private:
 
@@ -116,7 +116,7 @@ class noaa_apt_sink_impl : public noaa_apt_sink {
   string_queue *string_queue_;
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_NOAA_APT_SINK_IMPL_H */
+#endif /* INCLUDED_METEOR_NOAA_APT_SINK_IMPL_H */

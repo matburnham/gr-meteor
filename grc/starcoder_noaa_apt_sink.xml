@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>NOAA APT Sink</name>
-  <key>starcoder_noaa_apt_sink</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.noaa_apt_sink($filename_png, $width, $height, $sync, $flip)</make>
+  <key>meteor_noaa_apt_sink</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.noaa_apt_sink($filename_png, $width, $height, $sync, $flip)</make>
   <param>
     <name>Output PNG Filename</name>
     <key>filename_png</key>

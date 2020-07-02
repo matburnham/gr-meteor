@@ -19,15 +19,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_API_H
-#define INCLUDED_STARCODER_API_H
+#ifndef INCLUDED_METEOR_API_H
+#define INCLUDED_METEOR_API_H
 
 #include <gnuradio/attributes.h>
 
-#ifdef gnuradio_starcoder_EXPORTS
-#define STARCODER_API __GR_ATTR_EXPORT
+#ifdef gnuradio_meteor_EXPORTS
+#define METEOR_API __GR_ATTR_EXPORT
 #else
-#define STARCODER_API __GR_ATTR_IMPORT
+#define METEOR_API __GR_ATTR_IMPORT
 #endif
 
-#endif /* INCLUDED_STARCODER_API_H */
+#endif /* INCLUDED_METEOR_API_H */

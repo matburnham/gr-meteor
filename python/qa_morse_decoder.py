@@ -21,7 +21,7 @@
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
-import starcoder_swig as starcoder
+import meteor_swig as meteor
 
 class qa_morse_decoder (gr_unittest.TestCase):
 

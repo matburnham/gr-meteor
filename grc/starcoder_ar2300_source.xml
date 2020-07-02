@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>AR2300 Source</name>
-  <key>starcoder_ar2300_source</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.ar2300_source()</make>
+  <key>meteor_ar2300_source</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.ar2300_source()</make>
   <source>
     <name>out</name>
     <type>complex</type>

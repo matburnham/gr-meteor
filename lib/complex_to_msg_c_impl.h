@@ -18,13 +18,13 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_COMPLEX_TO_MSG_C_IMPL_H
-#define INCLUDED_STARCODER_COMPLEX_TO_MSG_C_IMPL_H
+#ifndef INCLUDED_METEOR_COMPLEX_TO_MSG_C_IMPL_H
+#define INCLUDED_METEOR_COMPLEX_TO_MSG_C_IMPL_H
 
-#include <starcoder/complex_to_msg_c.h>
+#include <meteor/complex_to_msg_c.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class complex_to_msg_c_impl : public complex_to_msg_c {
  private:
@@ -39,7 +39,7 @@ class complex_to_msg_c_impl : public complex_to_msg_c {
            gr_vector_void_star &output_items);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_COMPLEX_TO_MSG_C_IMPL_H */
+#endif /* INCLUDED_METEOR_COMPLEX_TO_MSG_C_IMPL_H */

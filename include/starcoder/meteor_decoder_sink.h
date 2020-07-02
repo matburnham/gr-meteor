@@ -18,28 +18,28 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_METEOR_DECODER_SINK_H
-#define INCLUDED_STARCODER_METEOR_DECODER_SINK_H
+#ifndef INCLUDED_METEOR_METEOR_DECODER_SINK_H
+#define INCLUDED_METEOR_METEOR_DECODER_SINK_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 /*!
- * \ingroup starcoder
+ * \ingroup meteor
  *
  */
-class STARCODER_API meteor_decoder_sink : virtual public gr::sync_block {
+class METEOR_API meteor_decoder_sink : virtual public gr::sync_block {
  public:
   typedef boost::shared_ptr<meteor_decoder_sink> sptr;
 
   static sptr make(const std::string &filename_png);
-  virtual void register_starcoder_queue(uint64_t ptr) = 0;
+  virtual void register_meteor_queue(uint64_t ptr) = 0;
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_METEOR_DECODER_SINK_H */
+#endif /* INCLUDED_METEOR_METEOR_DECODER_SINK_H */

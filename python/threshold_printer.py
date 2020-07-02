@@ -20,7 +20,7 @@
 #
 #############################
 #
-# starcoder_CW_threshold_printer
+# meteor_CW_threshold_printer
 #
 # The aim of this "asyncronous" GNURadio python block is to read a tagged stream of values
 # containing the Mag^2 of the signal, with RMS, multiplied by 2 (amplitude) and decimated 10.000 times.

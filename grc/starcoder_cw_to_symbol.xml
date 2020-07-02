@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
 	<name>CW to Symbol</name>
-	<key>starcoder_cw_to_symbol</key>
-  	<category>[starcoder]</category>
-	<import>import starcoder</import>
-	<make>starcoder.cw_to_symbol($sampling_rate, $threshold, $conf_level, $wpm)</make>
+	<key>meteor_cw_to_symbol</key>
+  	<category>[meteor]</category>
+	<import>import meteor</import>
+	<make>meteor.cw_to_symbol($sampling_rate, $threshold, $conf_level, $wpm)</make>
 	<callback>set_act_threshold($threshold)</callback>
 	
 	<param>

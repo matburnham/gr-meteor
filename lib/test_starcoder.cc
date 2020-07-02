@@ -30,15 +30,15 @@
 #include <gnuradio/unittests.h>
 #include <fstream>
 #include <iostream>
-#include "qa_starcoder.h"
+#include "qa_meteor.h"
 
 int main(int argc, char **argv) {
   CppUnit::TextTestRunner runner;
-  std::ofstream xmlfile(get_unittest_path("starcoder.xml").c_str());
+  std::ofstream xmlfile(get_unittest_path("meteor.xml").c_str());
   CppUnit::XmlOutputter *xmlout =
       new CppUnit::XmlOutputter(&runner.result(), xmlfile);
 
-  runner.addTest(qa_starcoder::suite());
+  runner.addTest(qa_meteor::suite());
   runner.setOutputter(xmlout);
 
   bool was_successful = runner.run("", false);

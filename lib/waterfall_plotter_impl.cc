@@ -33,7 +33,7 @@
 #include "pmt_to_proto.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 waterfall_plotter::sptr waterfall_plotter::make(double samp_rate,
                                                 double center_freq, int rps,
@@ -119,7 +119,7 @@ bool waterfall_plotter_impl::stop() {
       ND, dims, NPY_INT8, reinterpret_cast<void *>(numpy_array_buffer));
   if (numpy_array == NULL) goto error;
 
-  module_string = PyString_FromString((char *)"starcoder");
+  module_string = PyString_FromString((char *)"meteor");
   if (module_string == NULL) goto error;
 
   module = PyImport_Import(module_string);
@@ -155,7 +155,7 @@ bool waterfall_plotter_impl::stop() {
     char *image_buffer = PyString_AsString(result);
     if (image_buffer == NULL) goto error;
 
-    ::starcoder::BlockMessage grpc_pmt;
+    ::meteor::BlockMessage grpc_pmt;
     grpc_pmt.set_blob_value(image_buffer, image_size);
 
     string_queue_->push(grpc_pmt.SerializeAsString());
@@ -183,9 +183,9 @@ error:
   return true;
 }
 
-void waterfall_plotter_impl::register_starcoder_queue(uint64_t ptr) {
+void waterfall_plotter_impl::register_meteor_queue(uint64_t ptr) {
   string_queue_ = reinterpret_cast<string_queue *>(ptr);
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

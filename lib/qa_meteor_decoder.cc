@@ -26,7 +26,7 @@
 #include "meteor/meteor_packet.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 void qa_meteor_decoder::test_dump_empty() {
   meteor::packeter packeter;
@@ -95,5 +95,5 @@ void qa_meteor_decoder::test_full_decoding() {
   CPPUNIT_ASSERT_EQUAL(buf.str(), png_img);
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

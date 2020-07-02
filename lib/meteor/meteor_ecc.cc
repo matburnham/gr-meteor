@@ -44,7 +44,7 @@
 #include <algorithm>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 static const std::array<uint8_t, 256> ALPHA_ARR {
@@ -293,5 +293,5 @@ int ecc_decode(uint8_t *data, int pad) {
 }
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr

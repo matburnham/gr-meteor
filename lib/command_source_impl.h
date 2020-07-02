@@ -18,15 +18,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_COMMAND_SOURCE_IMPL_H
-#define INCLUDED_STARCODER_COMMAND_SOURCE_IMPL_H
+#ifndef INCLUDED_METEOR_COMMAND_SOURCE_IMPL_H
+#define INCLUDED_METEOR_COMMAND_SOURCE_IMPL_H
 
-#include <starcoder/command_source.h>
+#include <meteor/command_source.h>
 #include <thread>
 #include "string_queue.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class command_source_impl : public command_source {
  public:
@@ -37,7 +37,7 @@ class command_source_impl : public command_source {
   bool stop();
 
   void push(const std::string &message);
-  virtual uint64_t get_starcoder_queue_ptr();
+  virtual uint64_t get_meteor_queue_ptr();
 
  private:
   void readloop();
@@ -49,7 +49,7 @@ class command_source_impl : public command_source {
 
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_COMMAND_SOURCE_IMPL_H */
+#endif /* INCLUDED_METEOR_COMMAND_SOURCE_IMPL_H */

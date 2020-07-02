@@ -22,7 +22,7 @@
 from gnuradio import gr
 from gnuradio import uhd
 from grc_gnuradio import blks2 as grc_blks2
-from starcoder import starcoder_swig
+from meteor import meteor_swig
 
 class radio_source(gr.hier_block2):
     def __init__(self, radio, device_address, samp_rate, center_freq, gain, antenna, port_number):
@@ -49,7 +49,7 @@ class radio_source(gr.hier_block2):
 
         # Define blocks and connect them
         if radio == "AR2300":
-            self.radio_block = starcoder_swig.ar2300_source()
+            self.radio_block = meteor_swig.ar2300_source()
         elif radio == "USRP":
             self.radio_block = uhd.usrp_source(
                 device_address,

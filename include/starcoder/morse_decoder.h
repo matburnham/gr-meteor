@@ -37,21 +37,21 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDED_STARCODER_MORSE_DECODER_H
-#define INCLUDED_STARCODER_MORSE_DECODER_H
+#ifndef INCLUDED_METEOR_MORSE_DECODER_H
+#define INCLUDED_METEOR_MORSE_DECODER_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/block.h>
 
 namespace gr {
-  namespace starcoder {
+  namespace meteor {
     /*!
      * \brief Morse code decoder block.
      *
      * This block received messages from the previous blocks
      * and try to decode the dot and dashes into clear text.
      */
-    class STARCODER_API morse_decoder : virtual public gr::block
+    class METEOR_API morse_decoder : virtual public gr::block
     {
      public:
       typedef boost::shared_ptr<morse_decoder> sptr;
@@ -67,8 +67,8 @@ namespace gr {
       static sptr make(char unrecognized_char = '#', size_t min_frame_len = 3);
     };
 
-  } // namespace starcoder
+  } // namespace meteor
 } // namespace gr
 
-#endif /* INCLUDED_STARCODER_MORSE_DECODER_H */
+#endif /* INCLUDED_METEOR_MORSE_DECODER_H */
 

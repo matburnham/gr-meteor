@@ -37,14 +37,14 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDED_STARCODER_MORSE_DECODER_IMPL_H
-#define INCLUDED_STARCODER_MORSE_DECODER_IMPL_H
+#ifndef INCLUDED_METEOR_MORSE_DECODER_IMPL_H
+#define INCLUDED_METEOR_MORSE_DECODER_IMPL_H
 
-#include <starcoder/morse_decoder.h>
-#include <starcoder/morse_tree.h>
+#include <meteor/morse_decoder.h>
+#include <meteor/morse_tree.h>
 
 namespace gr {
-  namespace starcoder {
+  namespace meteor {
 
     class morse_decoder_impl : public morse_decoder
     {
@@ -60,8 +60,8 @@ namespace gr {
 
     };
 
-  } // namespace starcoder
+  } // namespace meteor
 } // namespace gr
 
-#endif /* INCLUDED_STARCODER_MORSE_DECODER_IMPL_H */
+#endif /* INCLUDED_METEOR_MORSE_DECODER_IMPL_H */
 

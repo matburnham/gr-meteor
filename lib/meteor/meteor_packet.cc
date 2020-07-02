@@ -44,7 +44,7 @@
 #include <algorithm>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 static const int PACKET_FULL_MARK = 2047;
@@ -184,5 +184,5 @@ void packeter::parse_cvcdu(const uint8_t *frame, int len) {
 }
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr

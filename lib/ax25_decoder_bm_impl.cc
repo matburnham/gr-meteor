@@ -42,11 +42,11 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include <starcoder/ax25.h>
+#include <meteor/ax25.h>
 #include "ax25_decoder_bm_impl.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 ax25_decoder_bm::sptr ax25_decoder_bm::make(const std::string& addr,
                                             uint8_t ssid, bool promisc,
@@ -441,5 +441,5 @@ int ax25_decoder_bm_impl::work(int noutput_items,
   return ret;
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

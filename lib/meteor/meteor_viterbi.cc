@@ -44,7 +44,7 @@
 #include <stdlib.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 static const unsigned char VITERBI27_POLYA = 79;
@@ -421,5 +421,5 @@ void viterbi::error_buffer_swap() {
 }
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr

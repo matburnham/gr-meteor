@@ -25,32 +25,32 @@
  * add them here.
  */
 
-#include "qa_starcoder.h"
+#include "qa_meteor.h"
 #include <cppunit/TestCaller.h>
 #include <gnuradio/blocks/null_sink.h>
 #include <gnuradio/top_block.h>
-#include <starcoder/ar2300_source.h>
+#include <meteor/ar2300_source.h>
 #include <stdio.h>
 #include <chrono>
 #include <thread>
 #include "qa_enqueue_message_sink.h"
 #include "qa_meteor_decoder.h"
 
-CppUnit::TestSuite *qa_starcoder::suite() {
-  CppUnit::TestSuite *s = new CppUnit::TestSuite("starcoder");
-  s->addTest(gr::starcoder::qa_enqueue_message_sink::suite());
-  s->addTest(gr::starcoder::qa_meteor_decoder::suite());
+CppUnit::TestSuite *qa_meteor::suite() {
+  CppUnit::TestSuite *s = new CppUnit::TestSuite("meteor");
+  s->addTest(gr::meteor::qa_enqueue_message_sink::suite());
+  s->addTest(gr::meteor::qa_meteor_decoder::suite());
 
   // The test below only works when the AR2300 is connected.
-  //s->addTest(new CppUnit::TestCaller<qa_starcoder>(
-  //    "run_ar2300_source_block", &qa_starcoder::run_ar2300_source_block));
+  //s->addTest(new CppUnit::TestCaller<qa_meteor>(
+  //    "run_ar2300_source_block", &qa_meteor::run_ar2300_source_block));
 
   return s;
 }
 
-void qa_starcoder::run_ar2300_source_block() {
+void qa_meteor::run_ar2300_source_block() {
   gr::top_block_sptr tb = gr::make_top_block("top");
-  gr::starcoder::ar2300_source::sptr src = gr::starcoder::ar2300_source::make();
+  gr::meteor::ar2300_source::sptr src = gr::meteor::ar2300_source::make();
   gr::block_sptr dst = gr::blocks::null_sink::make(sizeof(gr_complex));
 
   tb->connect(src, 0, dst, 0);

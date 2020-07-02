@@ -25,7 +25,7 @@
 #include <cppunit/TestCase.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class qa_meteor_decoder : public CppUnit::TestCase {
  public:
@@ -39,7 +39,7 @@ class qa_meteor_decoder : public CppUnit::TestCase {
   void test_full_decoding();
 };
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */
 
 #endif /* _QA_METEOR_DECODER_H_ */

@@ -37,14 +37,14 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_AX25_ENCODER_MB_IMPL_H
-#define INCLUDED_STARCODER_AX25_ENCODER_MB_IMPL_H
+#ifndef INCLUDED_METEOR_AX25_ENCODER_MB_IMPL_H
+#define INCLUDED_METEOR_AX25_ENCODER_MB_IMPL_H
 
-#include <starcoder/ax25_encoder_mb.h>
+#include <meteor/ax25_encoder_mb.h>
 #include <gnuradio/digital/lfsr.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class ax25_encoder_mb_impl : public ax25_encoder_mb {
  private:
@@ -75,7 +75,7 @@ class ax25_encoder_mb_impl : public ax25_encoder_mb {
            gr_vector_void_star &output_items);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_AX25_ENCODER_MB_IMPL_H */
+#endif /* INCLUDED_METEOR_AX25_ENCODER_MB_IMPL_H */

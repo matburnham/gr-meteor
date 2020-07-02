@@ -44,7 +44,7 @@
 #include <array>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 class bit_io_const {
@@ -77,7 +77,7 @@ class bit_io {
 };
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
 #endif /* INCLUDED_METEOR_BIT_IO_H */

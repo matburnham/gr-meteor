@@ -38,31 +38,31 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDED_STARCODER_CW_TO_SYMBOL_H
-#define INCLUDED_STARCODER_CW_TO_SYMBOL_H
+#ifndef INCLUDED_METEOR_CW_TO_SYMBOL_H
+#define INCLUDED_METEOR_CW_TO_SYMBOL_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-  namespace starcoder {
+  namespace meteor {
 
     /*!
      * \brief <+description of block+>
-     * \ingroup starcoder
+     * \ingroup meteor
      *
      */
-    class STARCODER_API cw_to_symbol : virtual public gr::sync_block
+    class METEOR_API cw_to_symbol : virtual public gr::sync_block
     {
      public:
       typedef boost::shared_ptr<cw_to_symbol> sptr;
 
       /*!
-       * \brief Return a shared_ptr to a new instance of starcoder::cw_to_symbol.
+       * \brief Return a shared_ptr to a new instance of meteor::cw_to_symbol.
        *
-       * To avoid accidental use of raw pointers, starcoder::cw_to_symbol's
+       * To avoid accidental use of raw pointers, meteor::cw_to_symbol's
        * constructor is in a private implementation
-       * class. starcoder::cw_to_symbol::make is the public interface for
+       * class. meteor::cw_to_symbol::make is the public interface for
        * creating new instances.
        */
       static cw_to_symbol::sptr
@@ -73,8 +73,8 @@ namespace gr {
       set_act_threshold (float thrld) = 0;
     };
 
-  } // namespace starcoder
+  } // namespace meteor
 } // namespace gr
 
-#endif /* INCLUDED_STARCODER_CW_TO_SYMBOL_H */
+#endif /* INCLUDED_METEOR_CW_TO_SYMBOL_H */
 

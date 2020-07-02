@@ -46,7 +46,7 @@
 #include "morse_decoder_impl.h"
 namespace gr
 {
-  namespace starcoder
+  namespace meteor
   {
 
     morse_decoder::sptr
@@ -134,6 +134,6 @@ namespace gr
           boost::bind (&morse_decoder_impl::symbol_msg_handler, this, _1));
     }
 
-  } /* namespace starcoder */
+  } /* namespace meteor */
 } /* namespace gr */
 

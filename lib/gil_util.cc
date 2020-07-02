@@ -24,7 +24,7 @@
 #include <fstream>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 std::string store_rgb_to_png_string(
     boost::gil::rgb8_image_t::view_t image_view) {
@@ -66,5 +66,5 @@ std::string store_gray_to_png_string(
   return buffer.str();
 }
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr

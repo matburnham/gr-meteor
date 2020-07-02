@@ -39,8 +39,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDE_STARCODER_MORSE_H_
-#define INCLUDE_STARCODER_MORSE_H_
+#ifndef INCLUDE_METEOR_MORSE_H_
+#define INCLUDE_METEOR_MORSE_H_
 
 #define MIN_WPM 5
 #define MAX_WPM 30
@@ -57,4 +57,4 @@ typedef enum {
 
 
 
-#endif /* INCLUDE_STARCODER_MORSE_H_ */
+#endif /* INCLUDE_METEOR_MORSE_H_ */

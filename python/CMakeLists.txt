@@ -39,7 +39,7 @@ GR_PYTHON_INSTALL(
     pmt_to_pdu.py
     threshold_printer.py
     groundstation_api.py
-    groundstation_api_doppler.py DESTINATION ${GR_PYTHON_DIR}/starcoder
+    groundstation_api_doppler.py DESTINATION ${GR_PYTHON_DIR}/meteor
 )
 
 ########################################################################
@@ -50,11 +50,11 @@ include(GrTest)
 ########################################################################
 # Generate protobuf source
 ########################################################################
-get_filename_component(hw_proto "${CMAKE_CURRENT_SOURCE_DIR}/../../api/starcoder.proto" ABSOLUTE)
+get_filename_component(hw_proto "${CMAKE_CURRENT_SOURCE_DIR}/../../api/meteor.proto" ABSOLUTE)
 protobuf_generate_python(hw_proto_src "${hw_proto}")
 add_custom_target(myTarget ALL DEPENDS ${hw_proto_src})
 
-set(GR_TEST_TARGET_DEPS gnuradio-starcoder myTarget)
+set(GR_TEST_TARGET_DEPS gnuradio-meteor myTarget)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
 GR_ADD_TEST(qa_command_source ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_command_source.py)
 GR_ADD_TEST(qa_ar2300_source ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_ar2300_source.py)

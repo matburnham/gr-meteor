@@ -18,15 +18,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_METEOR_DECODER_SINK_IMPL_H
-#define INCLUDED_STARCODER_METEOR_DECODER_SINK_IMPL_H
+#ifndef INCLUDED_METEOR_METEOR_DECODER_SINK_IMPL_H
+#define INCLUDED_METEOR_METEOR_DECODER_SINK_IMPL_H
 
-#include <starcoder/meteor_decoder_sink.h>
+#include <meteor/meteor_decoder_sink.h>
 #include <vector>
 #include <string_queue.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 struct item {
   size_t size;
   const uint8_t *partial_stream;
@@ -50,10 +50,10 @@ class meteor_decoder_sink_impl : public meteor_decoder_sink {
            gr_vector_void_star &output_items);
 
   bool stop();
-  void register_starcoder_queue(uint64_t ptr);
+  void register_meteor_queue(uint64_t ptr);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_METEOR_DECODER_SINK_IMPL_H */
+#endif /* INCLUDED_METEOR_METEOR_DECODER_SINK_IMPL_H */

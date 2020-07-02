@@ -21,7 +21,7 @@
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
-import starcoder_swig as starcoder
+import meteor_swig as meteor
 
 
 expected_decimation = (153, 165, 168, 165, 154, 166, 169, 167, 156, 169, 173,
@@ -49,7 +49,7 @@ class qa_waterfall_heatmap (gr_unittest.TestCase):
         src_data = self.generate_data()
         src = blocks.vector_source_c(src_data)
         s2v = blocks.stream_to_vector(gr.sizeof_gr_complex, self.fft_size)
-        op = starcoder.waterfall_heatmap(1000, 0, 1, self.fft_size, 0)
+        op = meteor.waterfall_heatmap(1000, 0, 1, self.fft_size, 0)
         dst = blocks.vector_sink_b(self.fft_size)
         self.tb.connect(src, s2v, op, dst)
 
@@ -60,7 +60,7 @@ class qa_waterfall_heatmap (gr_unittest.TestCase):
         src_data = self.generate_data()
         src = blocks.vector_source_c(src_data)
         s2v = blocks.stream_to_vector(gr.sizeof_gr_complex, self.fft_size)
-        op = starcoder.waterfall_heatmap(1000, 0, 1, self.fft_size, 1)
+        op = meteor.waterfall_heatmap(1000, 0, 1, self.fft_size, 1)
         dst = blocks.vector_sink_b(self.fft_size)
         self.tb.connect(src, s2v, op, dst)
 

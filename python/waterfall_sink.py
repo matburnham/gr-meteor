@@ -36,7 +36,7 @@
 
 from gnuradio import gr
 from gnuradio import blocks
-from starcoder import starcoder_swig
+from meteor import meteor_swig
 
 
 class waterfall_sink(gr.hier_block2):
@@ -68,13 +68,13 @@ class waterfall_sink(gr.hier_block2):
                                 gr.io_signature(1, 1, gr.sizeof_gr_complex),  # Input signature
                                 gr.io_signature(0, 0, 0)) # Output signature
 
-        waterfall_heatmap = starcoder_swig.waterfall_heatmap(samp_rate, center_freq, rps, fft_size, mode)
+        waterfall_heatmap = meteor_swig.waterfall_heatmap(samp_rate, center_freq, rps, fft_size, mode)
         s2v = blocks.stream_to_vector(gr.sizeof_gr_complex, fft_size)
-        self.waterfall_pl = starcoder_swig.waterfall_plotter(samp_rate, center_freq, rps, fft_size, filename)
+        self.waterfall_pl = meteor_swig.waterfall_plotter(samp_rate, center_freq, rps, fft_size, filename)
 
         self.connect((self, 0), (s2v, 0))
         self.connect((s2v, 0), (waterfall_heatmap, 0))
         self.connect((waterfall_heatmap, 0), (self.waterfall_pl, 0))
 
-    def register_starcoder_queue(self, ptr):
-        self.waterfall_pl.register_starcoder_queue(ptr)
+    def register_meteor_queue(self, ptr):
+        self.waterfall_pl.register_meteor_queue(ptr)

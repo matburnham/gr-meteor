@@ -45,7 +45,7 @@
 #include "waterfall_heatmap_impl.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 waterfall_heatmap::sptr waterfall_heatmap::make(double samp_rate,
                                                 double center_freq, double rps,
@@ -243,5 +243,5 @@ size_t waterfall_heatmap_impl::compute_max_hold(int8_t *out,
   return produced;
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

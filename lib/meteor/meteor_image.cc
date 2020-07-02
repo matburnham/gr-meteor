@@ -47,7 +47,7 @@
 #include <boost/gil/gil_all.hpp>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 imager::imager(int red_apid, int green_apid, int blue_apid)
@@ -379,5 +379,5 @@ void imager::dec_mcus(const uint8_t *packet, int len, int apd, int pck_cnt,
 }
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr

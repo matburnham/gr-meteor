@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>AX.25 Decoder</name>
-  <key>starcoder_ax25_decoder_bm</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.ax25_decoder_bm($addr, $ssid, $promisc, $descrambling, $max_frame_len, $strip_headers)</make>
+  <key>meteor_ax25_decoder_bm</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.ax25_decoder_bm($addr, $ssid, $promisc, $descrambling, $max_frame_len, $strip_headers)</make>
 
   <param>
     <name>Receiver Callsign</name>

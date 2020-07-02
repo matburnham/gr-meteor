@@ -61,7 +61,7 @@
 
 namespace gr
 {
-  namespace starcoder
+  namespace meteor
   {
 
     cw_to_symbol::sptr 
@@ -363,6 +363,6 @@ namespace gr
     }
 
 
-  } /* namespace starcoder */
+  } /* namespace meteor */
 } /* namespace gr */
 

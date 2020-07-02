@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
 	<name>Morse Decoder</name>
-	<key>starcoder_morse_decoder</key>
-  	<category>[starcoder]</category>
-	<import>import starcoder</import>
-	<make>starcoder.morse_decoder($unrecognized_char, $min_frame_len)</make>
+	<key>meteor_morse_decoder</key>
+  	<category>[meteor]</category>
+	<import>import meteor</import>
+	<make>meteor.morse_decoder($unrecognized_char, $min_frame_len)</make>
 
 	<param>
 		<name>Unrecognized character</name>

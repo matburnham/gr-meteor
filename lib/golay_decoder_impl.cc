@@ -30,7 +30,7 @@
 #include "golay24.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 golay_decoder::sptr golay_decoder::make(int offset, int num_units) {
   return gnuradio::get_initial_sptr(new golay_decoder_impl(offset, num_units));
@@ -99,5 +99,5 @@ void golay_decoder_impl::msg_handler(pmt::pmt_t pmt_msg) {
       pmt::cons(pmt::car(pmt_msg), pmt::init_u8vector(out.size(), out)));
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

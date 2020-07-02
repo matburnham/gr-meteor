@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>Radio Source</name>
-  <key>starcoder_radio_source</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.radio_source($radio, $device_address, $samp_rate, $center_freq, $gain, $antenna)</make>
+  <key>meteor_radio_source</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.radio_source($radio, $device_address, $samp_rate, $center_freq, $gain, $antenna)</make>
 
   <param>
     <name>Radio</name>

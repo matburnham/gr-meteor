@@ -50,7 +50,7 @@
 #include "meteor_packet.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 static const int MIN_CORRELATION = 45;
@@ -186,5 +186,5 @@ int decoder::pos() { return pos_; }
 int decoder::prev_pos() { return prev_pos_; }
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr

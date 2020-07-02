@@ -37,15 +37,15 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDED_STARCODER_CW_TO_SYMBOL_IMPL_H
-#define INCLUDED_STARCODER_CW_TO_SYMBOL_IMPL_H
+#ifndef INCLUDED_METEOR_CW_TO_SYMBOL_IMPL_H
+#define INCLUDED_METEOR_CW_TO_SYMBOL_IMPL_H
 
-#include <starcoder/morse.h>
-#include <starcoder/cw_to_symbol.h>
+#include <meteor/morse.h>
+#include <meteor/cw_to_symbol.h>
 
 namespace gr
 {
-  namespace starcoder
+  namespace meteor
   {
 
     class cw_to_symbol_impl : public cw_to_symbol
@@ -114,8 +114,8 @@ namespace gr
       set_act_threshold (float thrhld);
     };
 
-  } // namespace starcoder
+  } // namespace meteor
 } // namespace gr
 
-#endif /* INCLUDED_STARCODER_CW_TO_SYMBOL_IMPL_H */
+#endif /* INCLUDED_METEOR_CW_TO_SYMBOL_IMPL_H */
 

@@ -44,7 +44,7 @@
 #include <vector>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 const int MCU_PER_PACKET = 14;
@@ -140,7 +140,7 @@ class imager {
 };
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
 #endif /* INCLUDED_METEOR_IMAGE_H */

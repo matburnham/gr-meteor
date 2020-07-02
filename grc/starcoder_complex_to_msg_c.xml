@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>Complex to Message</name>
-  <key>starcoder_complex_to_msg_c</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.complex_to_msg_c($num_items)</make>
+  <key>meteor_complex_to_msg_c</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.complex_to_msg_c($num_items)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name

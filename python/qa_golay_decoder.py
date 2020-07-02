@@ -23,7 +23,7 @@ from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 import copy
 import pmt
-import starcoder_swig as starcoder
+import meteor_swig as meteor
 import time
 
 PREAMBLE = [0x32, 0x6F, 0x19, 0xD3]
@@ -39,7 +39,7 @@ class qa_golay_decoder(gr_unittest.TestCase):
 
     def setUp(self):
         self.tb = gr.top_block ()
-        self.decoder = starcoder.golay_decoder(4, 2)
+        self.decoder = meteor.golay_decoder(4, 2)
         self.snk = blocks.message_debug()
         self.tb.msg_connect((self.decoder, 'out'), (self.snk, 'store'))
 

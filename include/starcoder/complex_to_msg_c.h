@@ -18,37 +18,37 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_COMPLEX_TO_MSG_C_H
-#define INCLUDED_STARCODER_COMPLEX_TO_MSG_C_H
+#ifndef INCLUDED_METEOR_COMPLEX_TO_MSG_C_H
+#define INCLUDED_METEOR_COMPLEX_TO_MSG_C_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 /*!
  * This block takes in a stream of complex floats and packs them together
  * into a PMT blob containing `num_items` items.
  *
  */
-class STARCODER_API complex_to_msg_c : virtual public gr::sync_block {
+class METEOR_API complex_to_msg_c : virtual public gr::sync_block {
  public:
   typedef boost::shared_ptr<complex_to_msg_c> sptr;
 
   /*!
    * \brief Return a shared_ptr to a new instance of
-   * starcoder::complex_to_msg_c.
+   * meteor::complex_to_msg_c.
    *
-   * To avoid accidental use of raw pointers, starcoder::complex_to_msg_c's
+   * To avoid accidental use of raw pointers, meteor::complex_to_msg_c's
    * constructor is in a private implementation
-   * class. starcoder::complex_to_msg_c::make is the public interface for
+   * class. meteor::complex_to_msg_c::make is the public interface for
    * creating new instances.
    */
   static sptr make(int num_items);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_COMPLEX_TO_MSG_C_H */
+#endif /* INCLUDED_METEOR_COMPLEX_TO_MSG_C_H */

@@ -33,7 +33,7 @@
 #include "pmt_to_proto.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 meteor_decoder_sink::sptr meteor_decoder_sink::make(
     const std::string &filename_png) {
@@ -119,7 +119,7 @@ bool meteor_decoder_sink_impl::stop() {
   std::string png_b = packeter.dump_gray_image(meteor::BLUE_APID);
 
   if (string_queue_ != NULL) {
-    ::starcoder::BlockMessage grpc_pmt;
+    ::meteor::BlockMessage grpc_pmt;
     if (!png_img.empty()) {
       grpc_pmt.set_blob_value(png_img);
       string_queue_->push(grpc_pmt.SerializeAsString());
@@ -176,9 +176,9 @@ std::string meteor_decoder_sink_impl::construct_filename(
   return p.native();
 }
 
-void meteor_decoder_sink_impl::register_starcoder_queue(uint64_t ptr) {
+void meteor_decoder_sink_impl::register_meteor_queue(uint64_t ptr) {
   string_queue_ = reinterpret_cast<string_queue *>(ptr);
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

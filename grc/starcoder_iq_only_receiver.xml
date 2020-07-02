@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>IQ Only Receiver</name>
-  <key>starcoder_iq_only_receiver</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.iq_only_receiver($radio, $radio_device_address, $radio_samp_rate, $radio_center_freq, $radio_gain, $radio_antenna, $target_samp_rate, $freq_offset_dc_bias, $radio_port_number)</make>
+  <key>meteor_iq_only_receiver</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.iq_only_receiver($radio, $radio_device_address, $radio_samp_rate, $radio_center_freq, $radio_gain, $radio_antenna, $target_samp_rate, $freq_offset_dc_bias, $radio_port_number)</make>
 
   <param>
     <name>Radio</name>

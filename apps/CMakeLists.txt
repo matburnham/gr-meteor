@@ -20,7 +20,7 @@
 include(GrPython)
 
 install(
-    DIRECTORY flowgraphs scripts DESTINATION share/gnuradio/starcoder
+    DIRECTORY flowgraphs scripts DESTINATION share/gnuradio/meteor
 )
 
 GR_PYTHON_INSTALL(

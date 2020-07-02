@@ -31,7 +31,7 @@
 #include <cstring>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 std::string store_rgb_to_png_string(
     boost::gil::rgb8_image_t::view_t image_view);
@@ -39,7 +39,7 @@ std::string store_rgb_to_png_string(
 std::string store_gray_to_png_string(
     boost::gil::gray8_image_t::view_t image_view);
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
 #endif /* INCLUDED_GIL_UTIL_H */

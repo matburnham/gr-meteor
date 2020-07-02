@@ -37,23 +37,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDED_STARCODER_MORSE_TREE_H
-#define INCLUDED_STARCODER_MORSE_TREE_H
+#ifndef INCLUDED_METEOR_MORSE_TREE_H
+#define INCLUDED_METEOR_MORSE_TREE_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <memory>
 #include <string>
-#include <starcoder/morse.h>
+#include <meteor/morse.h>
 
 namespace gr
 {
-  namespace starcoder
+  namespace meteor
   {
 
     /*!
      * \brief Binary tree node containing the corresponding character
      */
-    class STARCODER_API tree_node
+    class METEOR_API tree_node
     {
     private:
       const char d_char;
@@ -87,7 +87,7 @@ namespace gr
      * The tree follows the ITU International Morse code representation
      * ITU-R M.1677-1
      */
-    class STARCODER_API morse_tree
+    class METEOR_API morse_tree
     {
     public:
       morse_tree ();
@@ -118,8 +118,8 @@ namespace gr
       delete_tree (tree_node *node);
     };
 
-  } // namespace STARCODER
+  } // namespace METEOR
 } // namespace gr
 
-#endif /* INCLUDED_STARCODER_MORSE_TREE_H */
+#endif /* INCLUDED_METEOR_MORSE_TREE_H */
 

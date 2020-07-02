@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>groundstation_api_doppler</name>
-  <key>starcoder_groundstation_api_doppler</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.groundstation_api_doppler($downlink_frequency, $uplink_frequency, $api_key, $api_url, $root_cert_path, $groundstation_id, $plan_id, $corrections_per_second, $verbose)</make>
+  <key>meteor_groundstation_api_doppler</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.groundstation_api_doppler($downlink_frequency, $uplink_frequency, $api_key, $api_url, $root_cert_path, $groundstation_id, $plan_id, $corrections_per_second, $verbose)</make>
 
   <param>
     <name>Downlink frequency in Hz</name>

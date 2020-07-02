@@ -21,7 +21,7 @@
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
-import starcoder_swig as starcoder
+import meteor_swig as meteor
 import os
 import tempfile
 from matplotlib.testing.compare import compare_images
@@ -45,7 +45,7 @@ class qa_waterfall_plotter (gr_unittest.TestCase):
         src_data = tuple(range(140, 180)*20)
         src = blocks.vector_source_b(src_data)
         s2v = blocks.stream_to_vector(gr.sizeof_char, self.fft_size)
-        op = starcoder.waterfall_plotter(1, 0, 1, self.fft_size, self.filename)
+        op = meteor.waterfall_plotter(1, 0, 1, self.fft_size, self.filename)
         self.tb.connect(src, s2v, op)
         self.tb.run()
         results = compare_images("test_waterfall.png", self.filename, 0.1)

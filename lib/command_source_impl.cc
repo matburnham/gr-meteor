@@ -28,7 +28,7 @@
 #include "proto_to_pmt.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 command_source::sptr command_source::make() {
   return gnuradio::get_initial_sptr(new command_source_impl());
@@ -63,7 +63,7 @@ void command_source_impl::readloop() {
   while (!finished_) {
     for (std::string s = queue_.blocking_pop(); s.size() != 0;
          s = queue_.pop()) {
-      ::starcoder::BlockMessage grpc_pmt;
+      ::meteor::BlockMessage grpc_pmt;
       if (!grpc_pmt.ParseFromString(s)) {
         GR_LOG_WARN(d_logger, "Failed to deserialize gRPC");
         continue;
@@ -78,7 +78,7 @@ void command_source_impl::push(const std::string &message) {
   queue_.push(message);
 }
 
-uint64_t command_source_impl::get_starcoder_queue_ptr() {
+uint64_t command_source_impl::get_meteor_queue_ptr() {
   return reinterpret_cast<uint64_t>(&queue_);
 }
 
@@ -87,5 +87,5 @@ uint64_t command_source_impl::get_starcoder_queue_ptr() {
  */
 command_source_impl::~command_source_impl() {}
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

@@ -18,17 +18,17 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_AR2300_SOURCE_IMPL_H
-#define INCLUDED_STARCODER_AR2300_SOURCE_IMPL_H
+#ifndef INCLUDED_METEOR_AR2300_SOURCE_IMPL_H
+#define INCLUDED_METEOR_AR2300_SOURCE_IMPL_H
 
-#include <starcoder/ar2300_source.h>
+#include <meteor/ar2300_source.h>
 #include "ar2300_receiver.h"
 
 #define CONSECUTIVE_WARNING_LIMIT 10
 #define AR2300_SCALE_FACTOR 1E-7
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class ar2300_source_impl : public ar2300_source {
  private:
@@ -52,7 +52,7 @@ class ar2300_source_impl : public ar2300_source {
            gr_vector_void_star& output_items) override;
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_AR2300_SOURCE_IMPL_H */
+#endif /* INCLUDED_METEOR_AR2300_SOURCE_IMPL_H */

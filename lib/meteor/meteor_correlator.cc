@@ -44,7 +44,7 @@
 #include <algorithm>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 correlator::correlator(uint64_t q_word) {
@@ -183,5 +183,5 @@ std::tuple<uint32_t, uint32_t, uint32_t> correlator::corr_correlate(
 }
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr

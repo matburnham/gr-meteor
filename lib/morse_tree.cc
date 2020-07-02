@@ -43,12 +43,12 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include <starcoder/morse_tree.h>
+#include <meteor/morse_tree.h>
 #include <string.h>
 
 namespace gr
 {
-  namespace starcoder
+  namespace meteor
   {
 
     /*!
@@ -329,5 +329,5 @@ namespace gr
       return d_char;
     }
 
-  } /* namespace starcoder */
+  } /* namespace meteor */
 } /* namespace gr */

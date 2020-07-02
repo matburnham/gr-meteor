@@ -50,7 +50,7 @@
 #include "pmt_to_proto.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 // Noaa apt sync pattern A
 // (see https://sourceforge.isae.fr/attachments/download/1813/apt_synch.gif)
@@ -133,7 +133,7 @@ void noaa_apt_sink_impl::write_image(std::string filename) {
           store_gray_to_png_string(flipped_up_down_view(image_received_view_));
 
     if (!image_string.empty()) {
-      ::starcoder::BlockMessage grpc_pmt;
+      ::meteor::BlockMessage grpc_pmt;
       grpc_pmt.set_blob_value(image_string);
       string_queue_->push(grpc_pmt.SerializeAsString());
     }
@@ -284,9 +284,9 @@ int noaa_apt_sink_impl::work(int noutput_items,
   return noutput_items;
 }
 
-void noaa_apt_sink_impl::register_starcoder_queue(uint64_t ptr) {
+void noaa_apt_sink_impl::register_meteor_queue(uint64_t ptr) {
   string_queue_ = reinterpret_cast<string_queue *>(ptr);
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

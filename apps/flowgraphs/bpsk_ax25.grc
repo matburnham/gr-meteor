@@ -1661,7 +1661,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_complex_to_msg_c</key>
+    <key>meteor_complex_to_msg_c</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1688,7 +1688,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_complex_to_msg_c_0</value>
+      <value>meteor_complex_to_msg_c_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1704,7 +1704,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_groundstation_api</key>
+    <key>meteor_groundstation_api</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1739,7 +1739,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_groundstation_api_0</value>
+      <value>meteor_groundstation_api_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1771,7 +1771,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_groundstation_api_doppler</key>
+    <key>meteor_groundstation_api_doppler</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1814,7 +1814,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_groundstation_api_doppler_0</value>
+      <value>meteor_groundstation_api_doppler_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1846,7 +1846,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_iq_only_receiver</key>
+    <key>meteor_iq_only_receiver</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1877,7 +1877,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_iq_only_receiver_0</value>
+      <value>meteor_iq_only_receiver_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1921,7 +1921,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_pdu_trim_uvector</key>
+    <key>meteor_pdu_trim_uvector</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1948,7 +1948,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_pdu_trim_uvector_0</value>
+      <value>meteor_pdu_trim_uvector_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1968,7 +1968,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_pmt_to_pdu</key>
+    <key>meteor_pmt_to_pdu</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1995,7 +1995,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_pmt_to_pdu_0_0</value>
+      <value>meteor_pmt_to_pdu_0_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2007,7 +2007,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_utils_message_router</key>
+    <key>meteor_utils_message_router</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2034,7 +2034,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_utils_message_router_0</value>
+      <value>meteor_utils_message_router_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2050,7 +2050,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_utils_message_router</key>
+    <key>meteor_utils_message_router</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2077,7 +2077,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_utils_message_router_0_0</value>
+      <value>meteor_utils_message_router_0_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2093,7 +2093,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_waterfall_sink</key>
+    <key>meteor_waterfall_sink</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2132,7 +2132,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_waterfall_sink_0_0</value>
+      <value>meteor_waterfall_sink_0_0</value>
     </param>
     <param>
       <key>mode</key>
@@ -2439,7 +2439,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_tagged_stream_to_pdu_1_0_0_0</source_block_id>
-    <sink_block_id>starcoder_utils_message_router_0</sink_block_id>
+    <sink_block_id>meteor_utils_message_router_0</sink_block_id>
     <source_key>pdus</source_key>
     <sink_key>in</sink_key>
   </connection>
@@ -2475,7 +2475,7 @@
   </connection>
   <connection>
     <source_block_id>digital_hdlc_deframer_bp_0</source_block_id>
-    <sink_block_id>starcoder_utils_message_router_0_0</sink_block_id>
+    <sink_block_id>meteor_utils_message_router_0_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
   </connection>
@@ -2492,74 +2492,74 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_complex_to_msg_c_0</source_block_id>
-    <sink_block_id>starcoder_pmt_to_pdu_0_0</sink_block_id>
+    <source_block_id>meteor_complex_to_msg_c_0</source_block_id>
+    <sink_block_id>meteor_pmt_to_pdu_0_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_groundstation_api_doppler_0</source_block_id>
-    <sink_block_id>starcoder_iq_only_receiver_0</sink_block_id>
+    <source_block_id>meteor_groundstation_api_doppler_0</source_block_id>
+    <sink_block_id>meteor_iq_only_receiver_0</sink_block_id>
     <source_key>downlink_shift</source_key>
     <sink_key>doppler_in</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_iq_only_receiver_0</source_block_id>
+    <source_block_id>meteor_iq_only_receiver_0</source_block_id>
     <sink_block_id>analog_agc_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_iq_only_receiver_0</source_block_id>
-    <sink_block_id>starcoder_complex_to_msg_c_0</sink_block_id>
+    <source_block_id>meteor_iq_only_receiver_0</source_block_id>
+    <sink_block_id>meteor_complex_to_msg_c_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_iq_only_receiver_0</source_block_id>
-    <sink_block_id>starcoder_waterfall_sink_0_0</sink_block_id>
+    <source_block_id>meteor_iq_only_receiver_0</source_block_id>
+    <sink_block_id>meteor_waterfall_sink_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_pdu_trim_uvector_0</source_block_id>
-    <sink_block_id>starcoder_groundstation_api_0</sink_block_id>
+    <source_block_id>meteor_pdu_trim_uvector_0</source_block_id>
+    <sink_block_id>meteor_groundstation_api_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>ax25</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_pmt_to_pdu_0_0</source_block_id>
+    <source_block_id>meteor_pmt_to_pdu_0_0</source_block_id>
     <sink_block_id>virtual_sink_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_utils_message_router_0</source_block_id>
+    <source_block_id>meteor_utils_message_router_0</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_1_0_0_0</sink_block_id>
     <source_key>out0</source_key>
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_utils_message_router_0</source_block_id>
+    <source_block_id>meteor_utils_message_router_0</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_1_0_0</sink_block_id>
     <source_key>out1</source_key>
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_utils_message_router_0_0</source_block_id>
-    <sink_block_id>starcoder_groundstation_api_0</sink_block_id>
+    <source_block_id>meteor_utils_message_router_0_0</source_block_id>
+    <sink_block_id>meteor_groundstation_api_0</sink_block_id>
     <source_key>out0</source_key>
     <sink_key>ax25</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_utils_message_router_0_0</source_block_id>
-    <sink_block_id>starcoder_pdu_trim_uvector_0</sink_block_id>
+    <source_block_id>meteor_utils_message_router_0_0</source_block_id>
+    <sink_block_id>meteor_pdu_trim_uvector_0</sink_block_id>
     <source_key>out1</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>virtual_source_0</source_block_id>
-    <sink_block_id>starcoder_groundstation_api_0</sink_block_id>
+    <sink_block_id>meteor_groundstation_api_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>iq</sink_key>
   </connection>

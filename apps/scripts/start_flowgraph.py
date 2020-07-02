@@ -80,7 +80,7 @@ def compile_flowgraph(path):
 
     # Create temporary directory to store compiled .py file. We need this because we can't control the output filename
     # of the compiled file
-    temp_dir = tempfile.mkdtemp("", "starcoder")
+    temp_dir = tempfile.mkdtemp("", "meteor")
     print('temporary directory {}'.format(temp_dir))
 
     subprocess.check_call(['grcc', '-d', temp_dir, path])

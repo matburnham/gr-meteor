@@ -37,15 +37,15 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDED_STARCODER_WATERFALL_HEATMAP_IMPL_H
-#define INCLUDED_STARCODER_WATERFALL_HEATMAP_IMPL_H
+#ifndef INCLUDED_METEOR_WATERFALL_HEATMAP_IMPL_H
+#define INCLUDED_METEOR_WATERFALL_HEATMAP_IMPL_H
 
-#include <starcoder/waterfall_heatmap.h>
+#include <meteor/waterfall_heatmap.h>
 #include <volk/volk.h>
 #include <gnuradio/fft/fft.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class waterfall_heatmap_impl : public waterfall_heatmap {
  private:
@@ -91,7 +91,7 @@ class waterfall_heatmap_impl : public waterfall_heatmap {
                    gr_vector_void_star &output_items);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_WATERFALL_HEATMAP_IMPL_H */
+#endif /* INCLUDED_METEOR_WATERFALL_HEATMAP_IMPL_H */

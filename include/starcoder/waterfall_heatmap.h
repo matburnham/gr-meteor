@@ -37,23 +37,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDED_STARCODER_WATERFALL_HEATMAP_H
-#define INCLUDED_STARCODER_WATERFALL_HEATMAP_H
+#ifndef INCLUDED_METEOR_WATERFALL_HEATMAP_H
+#define INCLUDED_METEOR_WATERFALL_HEATMAP_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 /*!
  * \brief This block computes the waterfall of the incoming signal
  * and outputs the dB quantized in the range [-128, 127], using a single
  * byte for each carrier.
- * \ingroup starcoder
+ * \ingroup meteor
  *
  */
-class STARCODER_API waterfall_heatmap : virtual public gr::block {
+class METEOR_API waterfall_heatmap : virtual public gr::block {
  public:
   typedef boost::shared_ptr<waterfall_heatmap> sptr;
 
@@ -78,7 +78,7 @@ class STARCODER_API waterfall_heatmap : virtual public gr::block {
                    size_t fft_size, int mode = 0);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_WATERFALL_HEATMAP_H */
+#endif /* INCLUDED_METEOR_WATERFALL_HEATMAP_H */

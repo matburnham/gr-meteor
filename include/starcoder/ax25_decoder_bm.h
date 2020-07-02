@@ -37,14 +37,14 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_AX25_DECODER_BM_H
-#define INCLUDED_STARCODER_AX25_DECODER_BM_H
+#ifndef INCLUDED_METEOR_AX25_DECODER_BM_H
+#define INCLUDED_METEOR_AX25_DECODER_BM_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 /*!
  * \brief AX.25 decoder that supports the legacy hardware radios.
@@ -63,10 +63,10 @@ namespace starcoder {
  * the right destination Callsign will be accepted. This feature can be
  * disabled using the promisc parameter.
  *
- * \ingroup starcoder
+ * \ingroup meteor
  *
  */
-class STARCODER_API ax25_decoder_bm : virtual public gr::sync_block {
+class METEOR_API ax25_decoder_bm : virtual public gr::sync_block {
  public:
   typedef boost::shared_ptr<ax25_decoder_bm> sptr;
 
@@ -98,7 +98,7 @@ class STARCODER_API ax25_decoder_bm : virtual public gr::sync_block {
                    bool strip_headers = false);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_AX25_DECODER_BM_H */
+#endif /* INCLUDED_METEOR_AX25_DECODER_BM_H */

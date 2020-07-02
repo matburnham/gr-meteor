@@ -21,10 +21,10 @@
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
-import starcoder_swig as starcoder
+import meteor_swig as meteor
 import time
 import pmt
-import starcoder_pb2
+import meteor_pb2
 
 
 class qa_command_source (gr_unittest.TestCase):
@@ -36,11 +36,11 @@ class qa_command_source (gr_unittest.TestCase):
         self.tb = None
 
     def test_complex(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         msg.complex_value.real_value = 1.2
         msg.complex_value.imaginary_value = 2.3
 
@@ -57,11 +57,11 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_pair(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         msg.pair_value.car.symbol_value = "testtransmission"
         msg.pair_value.cdr.double_value = 23.2
 
@@ -79,16 +79,16 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_tuple(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         v = msg.list_value.value.add()
         v.symbol_value = "testtransmission"
         v = msg.list_value.value.add()
         v.double_value = 23.2
-        msg.list_value.type = starcoder_pb2.List.TUPLE
+        msg.list_value.type = meteor_pb2.List.TUPLE
 
         expected = pmt.make_tuple(pmt.intern("testtransmission"),
                                   pmt.from_double(23.2))
@@ -104,11 +104,11 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_blob(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         msg.blob_value = "data"
 
         expected = pmt.init_u8vector(4, [ord('d'), ord('a'), ord('t'), ord('a')])
@@ -124,13 +124,13 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_u8_vector(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         msg.uniform_vector_value.u_value.value.extend([12, 0, 3])
-        msg.uniform_vector_value.u_value.size = starcoder_pb2.Size8
+        msg.uniform_vector_value.u_value.size = meteor_pb2.Size8
 
         expected = pmt.init_u8vector(3, [12, 0, 3])
 
@@ -145,13 +145,13 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_i32_vector(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         msg.uniform_vector_value.i_value.value.extend([12, -65500, 3])
-        msg.uniform_vector_value.i_value.size = starcoder_pb2.Size32
+        msg.uniform_vector_value.i_value.size = meteor_pb2.Size32
 
         expected = pmt.init_s32vector(3, [12, -65500, 3])
 
@@ -166,11 +166,11 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_f64_vector(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         msg.uniform_vector_value.f64_value.value.extend([2.4, -12.3, 21.2])
 
         expected = pmt.init_f64vector(3, [2.4, -12.3, 21.2])
@@ -186,11 +186,11 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_c64_vector(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         pl = msg.uniform_vector_value.c64_value.value.add()
         pl.real_value = 1.2
         pl.imaginary_value = -2.3
@@ -214,11 +214,11 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_dict(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         pl = msg.dict_value.entry.add()
         pl.key.symbol_value = 'key'
         pl.value.double_value = -2.3
@@ -238,11 +238,11 @@ class qa_command_source (gr_unittest.TestCase):
         self.assertTrue(pmt.equal(snk.get_message(0), expected))
 
     def test_pdu(self):
-        cs = starcoder.command_source()
+        cs = meteor.command_source()
         snk = blocks.message_debug()
         self.tb.msg_connect((cs, 'out'), (snk, 'store'))
 
-        msg = starcoder_pb2.BlockMessage()
+        msg = meteor_pb2.BlockMessage()
         md = msg.pair_value.car.dict_value.entry.add()
         md.key.symbol_value = 'metadata_1'
         md.value.integer_value = -2

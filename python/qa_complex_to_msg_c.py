@@ -23,7 +23,7 @@ from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 import pmt
 import numpy as np
-import starcoder_swig as starcoder
+import meteor_swig as meteor
 
 class qa_complex_to_msg_c (gr_unittest.TestCase):
 
@@ -39,7 +39,7 @@ class qa_complex_to_msg_c (gr_unittest.TestCase):
         expected = np.array([0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 64], dtype='uint8')
 
         src = blocks.vector_source_c(src_data)
-        ctm = starcoder.complex_to_msg_c(2)
+        ctm = meteor.complex_to_msg_c(2)
         snk = blocks.message_debug()
         self.tb.connect(src, ctm)
         self.tb.msg_connect((ctm, 'out'), (snk, 'store'))
@@ -57,7 +57,7 @@ class qa_complex_to_msg_c (gr_unittest.TestCase):
         expected2 = np.array([0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype='uint8')
 
         src = blocks.vector_source_c(src_data)
-        ctm = starcoder.complex_to_msg_c(2)
+        ctm = meteor.complex_to_msg_c(2)
         snk = blocks.message_debug()
         self.tb.connect(src, ctm)
         self.tb.msg_connect((ctm, 'out'), (snk, 'store'))

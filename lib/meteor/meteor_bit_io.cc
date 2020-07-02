@@ -43,7 +43,7 @@
 #include <iostream>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 bit_io_const::bit_io_const(const uint8_t *bytes, int len)
@@ -132,5 +132,5 @@ void bit_io::write_bitlist_reversed(uint8_t *list, int len) {
 }
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr

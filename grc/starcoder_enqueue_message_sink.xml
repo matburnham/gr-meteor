@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>Enqueue Message Sink</name>
-  <key>starcoder_enqueue_message_sink</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.enqueue_message_sink()</make>
+  <key>meteor_enqueue_message_sink</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.enqueue_message_sink()</make>
   <sink>
     <name>in</name>
     <type>message</type>

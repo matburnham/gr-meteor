@@ -22,8 +22,8 @@
 #define INCLUDED_PROTO_TO_PMT_H
 
 #include <pmt/pmt.h>
-#include "starcoder.pb.h"
+#include "meteor.pb.h"
 
-pmt::pmt_t convert_proto_to_pmt(const starcoder::BlockMessage &proto_msg);
+pmt::pmt_t convert_proto_to_pmt(const meteor::BlockMessage &proto_msg);
 
 #endif /* INCLUDED_PROTO_TO_PMT_H */

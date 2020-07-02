@@ -18,36 +18,36 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_GOLAY_DECODER_H
-#define INCLUDED_STARCODER_GOLAY_DECODER_H
+#ifndef INCLUDED_METEOR_GOLAY_DECODER_H
+#define INCLUDED_METEOR_GOLAY_DECODER_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/block.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 /*!
  * \brief <+description of block+>
- * \ingroup starcoder
+ * \ingroup meteor
  *
  */
-class STARCODER_API golay_decoder : virtual public gr::block {
+class METEOR_API golay_decoder : virtual public gr::block {
  public:
   typedef boost::shared_ptr<golay_decoder> sptr;
 
   /*!
-   * \brief Return a shared_ptr to a new instance of starcoder::golay_decoder.
+   * \brief Return a shared_ptr to a new instance of meteor::golay_decoder.
    *
-   * To avoid accidental use of raw pointers, starcoder::golay_decoder's
+   * To avoid accidental use of raw pointers, meteor::golay_decoder's
    * constructor is in a private implementation
-   * class. starcoder::golay_decoder::make is the public interface for
+   * class. meteor::golay_decoder::make is the public interface for
    * creating new instances.
    */
   static sptr make(int offset, int num_units);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_GOLAY_DECODER_H */
+#endif /* INCLUDED_METEOR_GOLAY_DECODER_H */

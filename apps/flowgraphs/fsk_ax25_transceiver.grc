@@ -439,7 +439,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_command_source</key>
+    <key>meteor_command_source</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1639,7 +1639,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_command_source</key>
+    <key>meteor_command_source</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1678,7 +1678,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_command_source</key>
+    <key>meteor_command_source</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1764,7 +1764,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_enqueue_message_sink</key>
+    <key>meteor_enqueue_message_sink</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1901,7 +1901,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_enqueue_message_sink</key>
+    <key>meteor_enqueue_message_sink</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2406,7 +2406,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_ax25_decoder_bm</key>
+    <key>meteor_ax25_decoder_bm</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2437,7 +2437,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_ax25_decoder_bm_0</value>
+      <value>meteor_ax25_decoder_bm_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2469,7 +2469,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_complex_to_msg_c</key>
+    <key>meteor_complex_to_msg_c</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2496,7 +2496,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_complex_to_msg_c_0</value>
+      <value>meteor_complex_to_msg_c_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2512,7 +2512,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_iq_only_receiver</key>
+    <key>meteor_iq_only_receiver</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2543,7 +2543,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_iq_only_receiver_0</value>
+      <value>meteor_iq_only_receiver_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2583,7 +2583,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_pmt_to_pdu</key>
+    <key>meteor_pmt_to_pdu</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2610,7 +2610,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_pmt_to_pdu_0</value>
+      <value>meteor_pmt_to_pdu_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2622,7 +2622,7 @@
     </param>
   </block>
   <block>
-    <key>starcoder_waterfall_sink</key>
+    <key>meteor_waterfall_sink</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -2661,7 +2661,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>starcoder_waterfall_sink_0</value>
+      <value>meteor_waterfall_sink_0</value>
     </param>
     <param>
       <key>mode</key>
@@ -3748,7 +3748,7 @@
   </connection>
   <connection>
     <source_block_id>ax25_payload_source</source_block_id>
-    <sink_block_id>starcoder_pmt_to_pdu_0</sink_block_id>
+    <sink_block_id>meteor_pmt_to_pdu_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
   </connection>
@@ -3766,7 +3766,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_message_strobe_0</source_block_id>
-    <sink_block_id>starcoder_pmt_to_pdu_0</sink_block_id>
+    <sink_block_id>meteor_pmt_to_pdu_0</sink_block_id>
     <source_key>strobe</source_key>
     <sink_key>in</sink_key>
   </connection>
@@ -3850,7 +3850,7 @@
   </connection>
   <connection>
     <source_block_id>digital_binary_slicer_fb_0</source_block_id>
-    <sink_block_id>starcoder_ax25_decoder_bm_0</sink_block_id>
+    <sink_block_id>meteor_ax25_decoder_bm_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3874,7 +3874,7 @@
   </connection>
   <connection>
     <source_block_id>doppler_command_source</source_block_id>
-    <sink_block_id>starcoder_iq_only_receiver_0</sink_block_id>
+    <sink_block_id>meteor_iq_only_receiver_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>doppler_in</sink_key>
   </connection>
@@ -3909,43 +3909,43 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_ax25_decoder_bm_0</source_block_id>
+    <source_block_id>meteor_ax25_decoder_bm_0</source_block_id>
     <sink_block_id>blocks_message_debug_0</sink_block_id>
     <source_key>pdu</source_key>
     <sink_key>print</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_ax25_decoder_bm_0</source_block_id>
+    <source_block_id>meteor_ax25_decoder_bm_0</source_block_id>
     <sink_block_id>fsk_9600_decoded</sink_block_id>
     <source_key>pdu</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_complex_to_msg_c_0</source_block_id>
+    <source_block_id>meteor_complex_to_msg_c_0</source_block_id>
     <sink_block_id>partial_iq_sink</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_iq_only_receiver_0</source_block_id>
+    <source_block_id>meteor_iq_only_receiver_0</source_block_id>
     <sink_block_id>low_pass_filter_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_iq_only_receiver_0</source_block_id>
-    <sink_block_id>starcoder_complex_to_msg_c_0</sink_block_id>
+    <source_block_id>meteor_iq_only_receiver_0</source_block_id>
+    <sink_block_id>meteor_complex_to_msg_c_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_iq_only_receiver_0</source_block_id>
-    <sink_block_id>starcoder_waterfall_sink_0</sink_block_id>
+    <source_block_id>meteor_iq_only_receiver_0</source_block_id>
+    <sink_block_id>meteor_waterfall_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>starcoder_pmt_to_pdu_0</source_block_id>
+    <source_block_id>meteor_pmt_to_pdu_0</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>pdus</sink_key>

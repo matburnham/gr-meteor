@@ -37,21 +37,21 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_NOAA_APT_SINK_H
-#define INCLUDED_STARCODER_NOAA_APT_SINK_H
+#ifndef INCLUDED_METEOR_NOAA_APT_SINK_H
+#define INCLUDED_METEOR_NOAA_APT_SINK_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 /*!
  * Sink block for NOAA satellites
- * \ingroup starcoder
+ * \ingroup meteor
  *
  */
-class STARCODER_API noaa_apt_sink : virtual public gr::sync_block {
+class METEOR_API noaa_apt_sink : virtual public gr::sync_block {
  public:
   typedef boost::shared_ptr<noaa_apt_sink> sptr;
 
@@ -78,10 +78,10 @@ class STARCODER_API noaa_apt_sink : virtual public gr::sync_block {
    */
   static sptr make(const char *filename_png, size_t width, size_t height,
                    bool sync, bool flip);
-  virtual void register_starcoder_queue(uint64_t ptr) = 0;
+  virtual void register_meteor_queue(uint64_t ptr) = 0;
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_NOAA_APT_SINK_H */
+#endif /* INCLUDED_METEOR_NOAA_APT_SINK_H */

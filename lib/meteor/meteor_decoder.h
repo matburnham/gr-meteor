@@ -46,7 +46,7 @@
 #include "meteor_viterbi.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 const int HARD_FRAME_LEN = 1024;
@@ -80,7 +80,7 @@ class decoder {
 };
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
 #endif /* INCLUDED_METEOR_DECODER_H */

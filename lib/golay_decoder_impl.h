@@ -18,13 +18,13 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_GOLAY_DECODER_IMPL_H
-#define INCLUDED_STARCODER_GOLAY_DECODER_IMPL_H
+#ifndef INCLUDED_METEOR_GOLAY_DECODER_IMPL_H
+#define INCLUDED_METEOR_GOLAY_DECODER_IMPL_H
 
-#include <starcoder/golay_decoder.h>
+#include <meteor/golay_decoder.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class golay_decoder_impl : public golay_decoder {
  public:
@@ -42,7 +42,7 @@ class golay_decoder_impl : public golay_decoder {
   const int num_units_;
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_GOLAY_DECODER_IMPL_H */
+#endif /* INCLUDED_METEOR_GOLAY_DECODER_IMPL_H */

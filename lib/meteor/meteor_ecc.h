@@ -43,7 +43,7 @@
 #include <array>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 void ecc_deinterleave(const uint8_t *data, uint8_t *output, int pos, int n);
@@ -55,7 +55,7 @@ int ecc_decode(uint8_t *data, int pad);
 void ecc_encode(uint8_t *data, int pad);
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
 #endif /* INCLUDED_METEOR_ECC_H */

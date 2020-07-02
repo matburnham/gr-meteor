@@ -45,7 +45,7 @@
 #include <tuple>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 const int PATTERN_SIZE = 64;
@@ -83,7 +83,7 @@ class correlator {
 };
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
 #endif /* INCLUDED_METEOR_CORRELATOR_H */

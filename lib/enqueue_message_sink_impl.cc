@@ -28,7 +28,7 @@
 #include "pmt_to_proto.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 enqueue_message_sink::sptr enqueue_message_sink::make() {
   return gnuradio::get_initial_sptr(new enqueue_message_sink_impl());
@@ -72,9 +72,9 @@ int enqueue_message_sink_impl::work(int noutput_items,
   return noutput_items;
 }
 
-void enqueue_message_sink_impl::register_starcoder_queue(uint64_t ptr) {
+void enqueue_message_sink_impl::register_meteor_queue(uint64_t ptr) {
   string_queue_ = reinterpret_cast<string_queue *>(ptr);
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

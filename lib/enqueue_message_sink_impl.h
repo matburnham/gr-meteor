@@ -18,16 +18,16 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_ENQUEUE_MESSAGE_SINK_IMPL_H
-#define INCLUDED_STARCODER_ENQUEUE_MESSAGE_SINK_IMPL_H
+#ifndef INCLUDED_METEOR_ENQUEUE_MESSAGE_SINK_IMPL_H
+#define INCLUDED_METEOR_ENQUEUE_MESSAGE_SINK_IMPL_H
 
-#include <starcoder/enqueue_message_sink.h>
+#include <meteor/enqueue_message_sink.h>
 #include <queue>
 #include <mutex>
 #include <string_queue.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class enqueue_message_sink_impl : public enqueue_message_sink {
  private:
@@ -44,10 +44,10 @@ class enqueue_message_sink_impl : public enqueue_message_sink {
 
   void handler(pmt::pmt_t msg);
 
-  void register_starcoder_queue(uint64_t ptr);
+  void register_meteor_queue(uint64_t ptr);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_ENQUEUE_MESSAGE_SINK_IMPL_H */
+#endif /* INCLUDED_METEOR_ENQUEUE_MESSAGE_SINK_IMPL_H */

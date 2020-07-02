@@ -19,8 +19,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDE_STARCODER_AX25_H_
-#define INCLUDE_STARCODER_AX25_H_
+#ifndef INCLUDE_METEOR_AX25_H_
+#define INCLUDE_METEOR_AX25_H_
 
 #include <limits.h>
 #include <stdint.h>
@@ -28,7 +28,7 @@
 
 namespace gr {
 
-namespace starcoder {
+namespace meteor {
 /**
  * Lookup table for the CCITT CRC16
  */
@@ -471,8 +471,8 @@ static inline ax25_decode_status_t ax25_decode(uint8_t *out, size_t *out_len,
 
 }
 
-}  // namespace starcoder
+}  // namespace meteor
 
 }  // namespace gr
 
-#endif /* INCLUDE_STARCODER_AX25_H_ */
+#endif /* INCLUDE_METEOR_AX25_H_ */

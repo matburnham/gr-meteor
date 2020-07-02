@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>Waterfall Plotter</name>
-  <key>starcoder_waterfall_plotter</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.waterfall_plotter($samp_rate, $center_freq, $rps, $fft_size, $filename)</make>
+  <key>meteor_waterfall_plotter</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.waterfall_plotter($samp_rate, $center_freq, $rps, $fft_size, $filename)</make>
 
   <param>
     <name>Sample Rate</name>

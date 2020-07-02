@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>Threshold printer</name>
-  <key>starcoder_threshold_printer</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.threshold_printer($straight_mode, $hard_threshold)</make>
+  <key>meteor_threshold_printer</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.threshold_printer($straight_mode, $hard_threshold)</make>
 
   <param>
     <name>Straight Mode</name>

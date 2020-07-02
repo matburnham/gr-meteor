@@ -2,9 +2,9 @@
 <block>
   <name>Waterfall Heatmap</name>
   <key>waterfall_heatmap</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.waterfall_heatmap($samp_rate, $center_freq, $rps, $fft_size, $mode)</make>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.waterfall_heatmap($samp_rate, $center_freq, $rps, $fft_size, $mode)</make>
 
   <param>
     <name>Sample Rate</name>

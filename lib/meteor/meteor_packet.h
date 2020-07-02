@@ -46,7 +46,7 @@
 #include "meteor_image.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 class packeter {
@@ -74,7 +74,7 @@ class packeter {
 };
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
 #endif /* INCLUDED_METEOR_PACKET_H */

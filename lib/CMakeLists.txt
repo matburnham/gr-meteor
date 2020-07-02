@@ -52,11 +52,11 @@ else()
   message(WARNING "Failed to locate libprotobuf and protoc!")
 endif()
 
-get_filename_component(hw_proto "${CMAKE_CURRENT_SOURCE_DIR}/../../api/starcoder.proto" ABSOLUTE)
+get_filename_component(hw_proto "${CMAKE_CURRENT_SOURCE_DIR}/../../api/meteor.proto" ABSOLUTE)
 
 protobuf_generate_cpp(hw_proto_srcs hw_proto_hdrs "${hw_proto}")
 
-list(APPEND starcoder_sources
+list(APPEND meteor_sources
     ${CMAKE_CURRENT_SOURCE_DIR}/../../cqueue/string_queue.cc
     ${hw_proto_srcs}
     proto_to_pmt.cc
@@ -90,14 +90,14 @@ list(APPEND starcoder_sources
     morse_decoder_impl.cc
     morse_tree.cc)
 
-set(starcoder_sources "${starcoder_sources}" PARENT_SCOPE)
-if(NOT starcoder_sources)
+set(meteor_sources "${meteor_sources}" PARENT_SCOPE)
+if(NOT meteor_sources)
 	MESSAGE(STATUS "No C++ sources... skipping lib/")
 	return()
-endif(NOT starcoder_sources)
+endif(NOT meteor_sources)
 
-add_library(gnuradio-starcoder SHARED ${starcoder_sources})
-target_link_libraries(gnuradio-starcoder
+add_library(gnuradio-meteor SHARED ${meteor_sources})
+target_link_libraries(gnuradio-meteor
     ${Boost_LIBRARIES}
     ${GNURADIO_ALL_LIBRARIES}
     ${LOG4CPP_LIBRARY}
@@ -105,10 +105,10 @@ target_link_libraries(gnuradio-starcoder
     ${PNG_LIBRARIES}
     usb-1.0
 )
-set_target_properties(gnuradio-starcoder PROPERTIES DEFINE_SYMBOL "gnuradio_starcoder_EXPORTS")
+set_target_properties(gnuradio-meteor PROPERTIES DEFINE_SYMBOL "gnuradio_meteor_EXPORTS")
 
 if(APPLE)
-    set_target_properties(gnuradio-starcoder PROPERTIES
+    set_target_properties(gnuradio-meteor PROPERTIES
         INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/lib"
     )
 endif(APPLE)
@@ -117,7 +117,7 @@ endif(APPLE)
 # Install built library files
 ########################################################################
 include(GrMiscUtils)
-GR_LIBRARY_FOO(gnuradio-starcoder RUNTIME_COMPONENT "starcoder_runtime" DEVEL_COMPONENT "starcoder_devel")
+GR_LIBRARY_FOO(gnuradio-meteor RUNTIME_COMPONENT "meteor_runtime" DEVEL_COMPONENT "meteor_devel")
 
 ########################################################################
 # Build and register unit test
@@ -156,9 +156,9 @@ COPYONLY
 
 include_directories( ${CPPUNIT_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/../../cqueue/ )
 
-list(APPEND test_starcoder_sources
-    ${CMAKE_CURRENT_SOURCE_DIR}/test_starcoder.cc
-    ${CMAKE_CURRENT_SOURCE_DIR}/qa_starcoder.cc
+list(APPEND test_meteor_sources
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_meteor.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/qa_meteor.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_enqueue_message_sink.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_meteor_decoder.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/../../cqueue/string_queue.cc
@@ -172,20 +172,20 @@ list(APPEND test_starcoder_sources
     gil_util.cc
 )
 
-add_executable(test-starcoder ${test_starcoder_sources})
+add_executable(test-meteor ${test_meteor_sources})
 
 target_link_libraries(
-  test-starcoder
+  test-meteor
   ${GNURADIO_RUNTIME_LIBRARIES}
   ${Boost_LIBRARIES}
   ${CPPUNIT_LIBRARIES}
   gnuradio-blocks
   gnuradio-pmt
-  gnuradio-starcoder
+  gnuradio-meteor
   ${PYTHON_LIBRARIES}
 )
 
-GR_ADD_TEST(test_starcoder test-starcoder)
+GR_ADD_TEST(test_meteor test-meteor)
 
 ########################################################################
 # Print summary

@@ -18,15 +18,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_STARCODER_WATERFALL_PLOTTER_IMPL_H
-#define INCLUDED_STARCODER_WATERFALL_PLOTTER_IMPL_H
+#ifndef INCLUDED_METEOR_WATERFALL_PLOTTER_IMPL_H
+#define INCLUDED_METEOR_WATERFALL_PLOTTER_IMPL_H
 
 #include <list>
-#include <starcoder/waterfall_plotter.h>
+#include <meteor/waterfall_plotter.h>
 #include <string_queue.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 struct item {
   size_t size;
   char *arr;
@@ -55,10 +55,10 @@ class waterfall_plotter_impl : public waterfall_plotter {
 
   virtual bool stop();
 
-  void register_starcoder_queue(uint64_t ptr);
+  void register_meteor_queue(uint64_t ptr);
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_WATERFALL_PLOTTER_IMPL_H */
+#endif /* INCLUDED_METEOR_WATERFALL_PLOTTER_IMPL_H */

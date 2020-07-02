@@ -47,7 +47,7 @@
 #include "meteor_bit_io.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 namespace meteor {
 
 const unsigned int NUM_STATES = 128;
@@ -113,7 +113,7 @@ class viterbi {
 };
 
 }  // namespace meteor
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
 #endif /* INCLUDED_METEOR_VITERBI_H */

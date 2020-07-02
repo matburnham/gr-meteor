@@ -19,13 +19,13 @@
 # The presence of this file turns this directory into a Python package
 
 '''
-This is the GNU Radio STARCODER module. Place your Python package
+This is the GNU Radio METEOR module. Place your Python package
 description here (python/__init__.py).
 '''
-# import swig generated symbols into the starcoder namespace
+# import swig generated symbols into the meteor namespace
 try:
 	# this might fail if the module is python-only
-	from starcoder_swig import *
+	from meteor_swig import *
 except ImportError:
   pass
 

@@ -25,7 +25,7 @@
 #include <cppunit/TestCase.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 class qa_enqueue_message_sink : public CppUnit::TestCase {
  public:
@@ -39,7 +39,7 @@ class qa_enqueue_message_sink : public CppUnit::TestCase {
   void test_registered_queue();
 };
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */
 
 #endif /* _QA_ENQUEUE_MESSAGE_SINK_H_ */

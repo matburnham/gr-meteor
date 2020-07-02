@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
   <name>AX.25 Encoder</name>
-  <key>starcoder_ax25_encoder_mb</key>
-  <category>[starcoder]</category>
-  <import>import starcoder</import>
-  <make>starcoder.ax25_encoder_mb($dest_addr, $dest_ssid, $src_addr, $src_ssid, $preamble_len, $postamble_len, $scramble)</make>
+  <key>meteor_ax25_encoder_mb</key>
+  <category>[meteor]</category>
+  <import>import meteor</import>
+  <make>meteor.ax25_encoder_mb($dest_addr, $dest_ssid, $src_addr, $src_ssid, $preamble_len, $postamble_len, $scramble)</make>
   <param>
     <name>Destination Callsign</name>
     <key>dest_addr</key>

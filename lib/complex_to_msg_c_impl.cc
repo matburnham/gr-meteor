@@ -26,7 +26,7 @@
 #include "complex_to_msg_c_impl.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 complex_to_msg_c::sptr complex_to_msg_c::make(int num_items) {
   return gnuradio::get_initial_sptr(new complex_to_msg_c_impl(num_items));
@@ -63,5 +63,5 @@ int complex_to_msg_c_impl::work(int noutput_items,
   return noutput_items;
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */

@@ -37,30 +37,30 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef INCLUDED_STARCODER_WATERFALL_PLOTTER_H
-#define INCLUDED_STARCODER_WATERFALL_PLOTTER_H
+#ifndef INCLUDED_METEOR_WATERFALL_PLOTTER_H
+#define INCLUDED_METEOR_WATERFALL_PLOTTER_H
 
-#include <starcoder/api.h>
+#include <meteor/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 /*!
  * \brief <+description of block+>
- * \ingroup starcoder
+ * \ingroup meteor
  *
  */
-class STARCODER_API waterfall_plotter : virtual public gr::sync_block {
+class METEOR_API waterfall_plotter : virtual public gr::sync_block {
  public:
   typedef boost::shared_ptr<waterfall_plotter> sptr;
 
   static sptr make(double samp_rate, double center_freq, int rps,
                    size_t fft_size, char* filename);
-  virtual void register_starcoder_queue(uint64_t ptr) = 0;
+  virtual void register_meteor_queue(uint64_t ptr) = 0;
 };
 
-}  // namespace starcoder
+}  // namespace meteor
 }  // namespace gr
 
-#endif /* INCLUDED_STARCODER_WATERFALL_PLOTTER_H */
+#endif /* INCLUDED_METEOR_WATERFALL_PLOTTER_H */

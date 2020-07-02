@@ -18,8 +18,8 @@
  */
 
 /* This header can be read by both C and C++ compilers */
-#ifndef STARCODER_QUEUE_H
-#define STARCODER_QUEUE_H
+#ifndef METEOR_QUEUE_H
+#define METEOR_QUEUE_H
 #ifdef __cplusplus
 #include <mutex>
 #include <condition_variable>
@@ -54,4 +54,4 @@ extern size_t blocking_spsc_queue_pop(blocking_spsc_queue* q, char* arr,
 #ifdef __cplusplus
 }
 #endif
-#endif /*STARCODER_QUEUE_H*/
+#endif /*METEOR_QUEUE_H*/

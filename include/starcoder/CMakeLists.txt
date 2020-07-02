@@ -35,5 +35,5 @@ install(FILES
     meteor_decoder_sink.h
     golay_decoder.h
     cw_to_symbol.h
-    morse_decoder.h DESTINATION include/starcoder
+    morse_decoder.h DESTINATION include/meteor
 )

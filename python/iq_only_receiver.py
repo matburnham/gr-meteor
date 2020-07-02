@@ -27,7 +27,7 @@ from radio_source import radio_source
 
 class iq_only_receiver(gr.hier_block2):
     """
-    This hierarchical block wraps a `starcoder.radio_source` and performs the
+    This hierarchical block wraps a `meteor.radio_source` and performs the
     following functions:
     * Expects Doppler shift information from an external source for correction.
     * The offset frequency for preventing DC bias can be specified.

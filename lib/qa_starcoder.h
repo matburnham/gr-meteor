@@ -20,15 +20,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef _QA_STARCODER_H_
-#define _QA_STARCODER_H_
+#ifndef _QA_METEOR_H_
+#define _QA_METEOR_H_
 
 #include <gnuradio/attributes.h>
 #include <cppunit/TestSuite.h>
 #include <cppunit/TestFixture.h>
 
 //! collect all the tests for the gr-filter directory
-class __GR_ATTR_EXPORT qa_starcoder : public CppUnit::TestFixture {
+class __GR_ATTR_EXPORT qa_meteor : public CppUnit::TestFixture {
  public:
   //! return suite of tests for all of gr-filter directory
   static CppUnit::TestSuite *suite();
@@ -41,4 +41,4 @@ class __GR_ATTR_EXPORT qa_starcoder : public CppUnit::TestFixture {
   void tearDown() {}
 };
 
-#endif /* _QA_STARCODER_H_ */
+#endif /* _QA_METEOR_H_ */

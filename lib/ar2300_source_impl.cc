@@ -26,7 +26,7 @@
 #include "ar2300_source_impl.h"
 
 namespace gr {
-namespace starcoder {
+namespace meteor {
 
 ar2300_source::sptr ar2300_source::make() {
   return gnuradio::get_initial_sptr(new ar2300_source_impl());
@@ -138,5 +138,5 @@ bool ar2300_source_impl::validate_sample(const char (&in)[8]) const {
   return false;
 }
 
-} /* namespace starcoder */
+} /* namespace meteor */
 } /* namespace gr */
