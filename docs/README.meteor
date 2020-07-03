@@ -1,6 +1,19 @@
-This is the meteor-write-a-block package meant as a guide to building
-out-of-tree packages. To use the meteor blocks, the Python namespaces
-is in 'meteor', which is imported as:
+# Meteor Decoder GnuRadio block
+
+A GnuRadio block to decode METEOR soft-symbols to an image.
+
+## Requirements
+
+* GnuRadio 3.8
+
+## Optional
+
+* CppUnit
+* Doxygen
+
+## Usage
+
+To use the meteor blocks, the Python namespaces is in 'meteor', which is imported as:
 
     import meteor
 
@@ -9,3 +22,9 @@ in this package. A quick listing of the details can be found in Python
 after importing by using:
 
     help(meteor)
+
+## Acknowledgements
+
+This module is derive from https://github.com/infostellarinc/starcoder, which
+itself is derived from https://github.com/artlav/meteor_decoder (see
+https://www.rtl-sdr.com/new-gnu-radio-block-for-decoding-meteor-m2-images/).
