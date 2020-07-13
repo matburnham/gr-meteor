@@ -2,14 +2,19 @@
 
 A GnuRadio block to decode METEOR soft-symbols to an image.
 
+![C/C++ CI](https://github.com/matburnham/gr-meteor/workflows/C/C++%20CI/badge.svg)
+
 ## Requirements
 
 * GnuRadio 3.8
+* Protcol Buffers (libprotobuf-dev protobuf-compiler)
+* swig
 
 ## Optional
 
 * CppUnit
 * Doxygen
+* graphviz
 
 ## Usage
 
@@ -25,6 +30,6 @@ after importing by using:
 
 ## Acknowledgements
 
-This module is derive from https://github.com/infostellarinc/starcoder, which
+This module is derived from https://github.com/infostellarinc/starcoder, which
 itself is derived from https://github.com/artlav/meteor_decoder (see
 https://www.rtl-sdr.com/new-gnu-radio-block-for-decoding-meteor-m2-images/).
